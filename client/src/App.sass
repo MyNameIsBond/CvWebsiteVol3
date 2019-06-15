@@ -1,0 +1,307 @@
+$whiteText: #fff;
+$greyText: grey;
+$primaryColour: #455A64;
+$secondaryColour: #343a40;
+$thirdColour: lightblue;
+$font-Nav: 'Oswald', sans-serif;
+$font-title: 'Ubuntu', sans-serif;
+$font-logo: 'Pacifico', cursive;
+$shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
+body
+    overflow-x: hidden
+    
+// Navigation Bar
+.navContainer
+    transition: ease-in-out 0.3s
+    padding: 0 1em
+    color: $whiteText
+    position: absolute
+    display: grid
+    grid-template-columns: 20% auto
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 9
+    min-height: 80px
+    ul
+        align-self: center
+        justify-self: center
+        justify-self: end
+        font-family: $font-Nav
+        font-weight: bold
+        text-decoration-style: bold
+        font-size: 14px
+        letter-spacing: 0.09em
+        padding-right: 15%
+        float: right
+        list-style-type: none
+        li
+            float: left
+            padding: 0.9em 0.6em
+            a
+                color: $whiteText
+                padding: 5px
+                text-decoration: none
+            a:hover
+                border-bottom: 1px red solid
+    .logo
+        align-self: center
+        font-size: 25px
+        justify-self: end
+        letter-spacing: 0.05em
+        font-family: $font-logo
+.activeNav
+    transition: ease-in-out 0.3s
+    box-shadow: $shallowShadow
+    position: fixed
+    color: $primaryColour
+    background-color: $whiteText
+    ul
+        li
+            a
+                color: $primaryColour
+
+
+// Home Screen
+.credGrid
+    letter-spacing: 0.05em
+    font-size: 20px
+    width: 100%
+    position: absolute
+    top: 30%
+    right: auto
+    display: grid
+    grid-column: auto
+    grid-auto-rows: auto
+    .iconsCred
+        justify-self: center
+        display: grid
+        grid-gap: 0px 20px
+        grid-template-columns: repeat(2, 1fr)
+        svg
+            height: 28px
+            color: $whiteText
+    button
+        cursor: pointer
+        color: $whiteText
+        font-family: $font-title
+        justify-self: center
+        margin: 20px 0px
+        border-radius: 25px
+        height: 50px
+        width: 200px
+        font-size: 16px
+        background: none
+        padding: 15px
+        align-self: center
+        transition: 0.3s ease-in-out
+    button:focus
+        outline: none
+    button:hover
+        color: $primaryColour
+        background-color: $whiteText
+.homeScreen
+    overflow-x: hidden
+    background-color: black
+    .homeCred
+        grid-template-rows: 30px 110px 70px 
+        display: grid
+        justify-items: center
+        font-family: $font-Nav
+        color: $whiteText
+        p
+            color: $thirdColour
+            font-size: 18px
+        h2
+            font-size: 50px
+            strong
+                font-family: $font-logo
+                color: $thirdColour
+    .homeImg
+        opacity: .7
+
+//   About me 
+.aboutMe
+    display: grid
+    padding-top: 80px
+    height: 100vh
+    width: 100%
+    grid-template-columns: 40% 60%
+    grid-template-rows: 100vh
+    img
+        justify-self: center
+    .aboutMeTextGrid
+        display: grid
+        grid-auto-rows: auto
+        height: 74%
+        padding: 35px 50px
+        p
+            color: $primaryColour
+            letter-spacing: 0.03em
+        .aboutMeText
+            line-height: 2em
+            color: $greyText
+    .languages
+        img
+        p
+            font-weight: bold
+        .languagesGrid
+            display: grid
+            grid-template-rows: auto
+            grid-template-columns: repeat(5, 80px)
+    .skills
+        display: grid
+        padding: 10px 0px
+        p
+            font-weight: bold
+        svg
+            height: 30px
+        .skillsGrid
+            display: grid
+            grid-template-columns: repeat(8, 80px)
+            grid-template-rows: auto
+            grid-gap: 1em 0.5em
+            div
+                place-self: center
+                align-self: center
+                justify-self: center
+            small
+                justify-self: center
+                align-self: center
+                font-size: 10px
+                color: $greyText
+//Services
+.servicesContainer
+    height: 100vh
+    padding: 0px 30px
+    background-color: #f7f7f7
+    display: grid
+    .serTitle
+        place-self: center
+        align-self: start
+        font-weight: bold
+        font-size: 25px
+    .separator
+        margin: -30px auto
+        height: 3px
+        width: 100px
+        border-radius: 50%
+        background-color: $primaryColour
+    .services
+        justify-items: center
+        padding: 0px 30px
+        display: grid
+        grid-gap: 15px
+        grid-template-columns: repeat(3,auto)
+        grid-template-rows: repeat(2, minmax(200px, 280px))
+        div
+            box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
+            height: auto
+            width: 310px
+            padding: 30px
+            align-self: stretch
+            border-radius: 4px
+            background-color: $whiteText
+            line-height: 1.5em
+        .servicesTitle
+            font-weight: bold
+        .servicesText
+            color: $greyText
+
+.portofolioContainer
+    margin: 0px 6%
+    height: 100vh
+    padding: 0px 30px
+    background-color: $whiteText
+    display: grid
+    grid-template-rows: 16% auto
+    .serTitle
+        place-self: center
+        align-self: start
+        font-weight: bold
+        font-size: 25px
+    .separator
+        margin: -30px auto
+        height: 3px
+        width: 100px
+        border-radius: 50%
+        background-color: $primaryColour
+    .portofolioContent
+        display: grid
+        grid-template-columns: repeat(4,auto)
+        grid-template-rows: repeat(3,300px)
+        grid-gap: 15px
+.hoverCard
+    border: 1px #f7f7f7 solid
+    box-shadow: $shallowShadow !important
+    .Front
+        
+        display: grid
+        justify-items: center
+        align-items: center
+        width: 100%
+        grid-template-column: auto
+        grid-template-rows: auto 4px auto
+        justify-items: center
+        align-items: center
+        background-color: #f7f7f7
+        .seper
+            height: 2px
+            width: 200px
+            border-radius: 5px
+            background-color: $primaryColour
+        i
+            color: $primaryColour
+            place-self: center
+            align-self: center
+
+        div
+            display: grid
+            justify-items: center
+            svg
+                color: $primaryColour
+                height: 100px
+    .Back
+        background-color: $primaryColour
+        color: $whiteText
+        display: grid
+        padding: 0px 40px
+        padding-top: 20px
+        grid-template-rows: 20% 35% auto
+        grid-template-column: 60%
+        justify-self: start
+        width: 100%
+        justify-items: center
+        align-items: center
+        box-shadow: $shallowShadow
+        h4
+            align-self: center
+            place-self: center
+            justify-self: center
+            align-self: center 
+        p
+            color: $greyText
+            place-self: center
+            justify-self: start
+            align-self: start 
+        div
+            display: grid
+            justify-items: center
+            svg
+                place-self: center
+                align-self: center 
+                cursor: pointer
+                height: 35px
+#chattingSystem
+    grid-row: span 2
+    grid-column: span 2
+#blogDjango
+    grid-row: span 2
+    grid-column: span 2
+
+.timelineContainer
+    display: grid
+    margin-top: 300px
+    height: 1500px
+    background-color: #f7f7f7
+
