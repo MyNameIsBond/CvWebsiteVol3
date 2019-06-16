@@ -232,10 +232,8 @@ body
         grid-template-rows: repeat(3,300px)
         grid-gap: 15px
 .hoverCard
-    border: 1px #f7f7f7 solid
-    box-shadow: $shallowShadow !important
+    box-shadow: none !important
     .Front
-        
         display: grid
         justify-items: center
         align-items: center
@@ -301,7 +299,43 @@ body
 
 .timelineContainer
     display: grid
+    grid-template-rows: 15% 10% auto
     margin-top: 300px
     height: 1500px
     background-color: #f7f7f7
+    h1
+        justify-self: center
+        font-size: 4em
 
+    .timelineHeaders
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 100px 100px
+        h4
+            align-self: end
+            justify-self: center
+        small
+            align-self: start
+            color: $greyText
+            justify-self: center
+
+.timeLine
+    grid-row: 3
+    display: grid
+    grid-template-columns: 45% 10% 45%
+    .mylife
+        grid-column: 1
+        background-color: green
+    .career
+        grid-column: 3
+        background-color: red
+    hr
+        left: 50%
+        grid-column: 2
+        position: absolute
+        justify-self: center
+        width: 5px
+        border-radius: 100px
+        margin-top: 0px
+        background-color: #000
+        border: none
