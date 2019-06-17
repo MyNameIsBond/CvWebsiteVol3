@@ -7,6 +7,7 @@ $font-Nav: 'Oswald', sans-serif;
 $font-title: 'Ubuntu', sans-serif;
 $font-logo: 'Pacifico', cursive;
 $shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
+$veryLightGrey: #f7f7f7
 body
     overflow-x: hidden
     
@@ -174,7 +175,7 @@ body
 .servicesContainer
     height: 100vh
     padding: 0px 30px
-    background-color: #f7f7f7
+    background-color: $veryLightGrey
     display: grid
     .serTitle
         place-self: center
@@ -242,7 +243,7 @@ body
         grid-template-rows: auto 4px auto
         justify-items: center
         align-items: center
-        background-color: #f7f7f7
+        background-color: $veryLightGrey
         .seper
             height: 2px
             width: 200px
@@ -299,10 +300,10 @@ body
 
 .timelineContainer
     display: grid
-    grid-template-rows: 15% 10% auto
+    grid-template-rows: 100px 100px auto
     margin-top: 300px
-    height: 1500px
-    background-color: #f7f7f7
+    height: 3500px
+    background-color: $veryLightGrey
     h1
         justify-self: center
         font-size: 4em
@@ -320,15 +321,52 @@ body
             justify-self: center
 
 .timeLine
+    .timelineCircles
+        grid-column: 2 
+        grid-row: 1
+        display: grid
+        grid-template-rows: repeat(auto-fill, 400px)
+        .lifelineCircles
+            margin-top: 30px
+            justify-self: center
+            border-radius: 100%
+            z-index: 1
+            height: 85px
+            width: 85px
+            background-color: black
+            display: grid
+            p
+                font-size: 12px
+                color: $whiteText
+                justify-self: center
+                font-weight: bold
+                align-self: center
+        .careerlineCircles
+            justify-self: center
+            border-radius: 100%
+            z-index: 1
+            height: 85px
+            width: 85px
+            background-color: black
+            display: grid
+
+            p
+                color: $whiteText
+                font-size: 12px
+                font-weight: bold
+                justify-self: center
+                align-self: center
     grid-row: 3
     display: grid
     grid-template-columns: 45% 10% 45%
     .mylife
         grid-column: 1
-        background-color: green
+        display: grid
+        grid-template-rows: repeat(auto-fill, 750px)
     .career
         grid-column: 3
-        background-color: red
+        display: grid
+        grid-template-rows: repeat(auto-fill, 750px)
     hr
         left: 50%
         grid-column: 2
@@ -339,3 +377,56 @@ body
         margin-top: 0px
         background-color: #000
         border: none
+
+.mylifeCard
+    margin-top: 30px
+    padding: 1em
+    background-color: $whiteText
+    justify-self: center
+    width: 80%
+    box-shadow: $shallowShadow
+    border-radius: 10px
+    height: 650px
+    display: grid
+    grid-template-rows: auto 
+    .locationCard
+        margin-top: 7px
+        font-size: 15px
+        color: $greyText
+        strong
+            color: grey
+    img
+        justify-self: center
+        max-width: 100%
+        width: auto
+        z-index: 1
+    .title
+        border-bottom: solid rgb(232, 232, 232) 1px
+        margin-top: 15px
+        font-size: 30px
+        a
+            text-decoration: none
+            color: rgb(69, 112, 230)
+        a:hover
+            text-decoration: underline
+    .cardText
+        color: $greyText
+        margin: 20px 0px
+        padding: 20px 0px
+        border-bottom: solid rgb(232, 232, 232) 1px
+    .cardSign
+        justify-self: end
+        color: $primaryColour 
+        font-weight: bold
+        font-family: $font-logo
+
+
+// Cards on .timeLine
+.leftArrow
+    height: 25px
+    width: 25px
+    transform: rotate(45deg)
+    left: 40.7%
+    z-index: 0
+    position: absolute
+    background-color: inherit
