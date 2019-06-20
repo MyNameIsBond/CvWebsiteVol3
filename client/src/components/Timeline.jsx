@@ -49,16 +49,15 @@ export default class Timeline extends Component {
               <div className="leftArrow" />
               <img src={require('./images/acceptance.jpg')} alt="" />
               <p className="title">
-                I was accepted by <a href="https://www.coventry.ac.uk/">Coventry University</a>
+                Completed the 1st year studies with satisfying marks
                 <br />
                 <p className="locationCard">
                   Athens,<strong>Greece</strong>
                 </p>
               </p>
               <p className="cardText">
-                The acceptance of Coventry University came and I was more than happy due to I had to
-                have a good mark in IELTS, which was one the requirements for my appliance to get
-                accepted along with good marks in mathematics and my A levels
+                The first year of Cumputing BSc is over and I am in a good position to start hoping
+                for a 1st class degree
               </p>
               <p className="cardSign">Tony Hajdini</p>
             </div>
@@ -80,21 +79,22 @@ export default class Timeline extends Component {
               <p className="cardSign">Tony Hajdini</p>
             </div>
           </div>
+          {/* ------------- Card section ------------- */}
           <div className="career">
             <div className="mylifeCard">
               <div className="leftArrow" />
               <img src={require('./images/acceptance.jpg')} alt="" />
               <p className="title">
-                I was accepted by <a href="https://www.coventry.ac.uk/">Coventry University</a>
+                Completed a <a href="https://www.coventry.ac.uk/">Navigation system </a>
+                in Django / Python
                 <br />
                 <p className="locationCard">
-                  Athens,<strong>Greece</strong>
+                  Coventry,<strong>England</strong>
                 </p>
               </p>
               <p className="cardText">
-                The acceptance of Coventry University came and I was more than happy due to I had to
-                have a good mark in IELTS, which was one the requirements for my appliance to get
-                accepted along with good marks in mathematics and my A levels
+                It was a nagivation system where it meant to help new students navigate through the
+                Coventry University campus. This website uses a lot of google APIS for google maps
               </p>
               <p className="cardSign">Tony Hajdini</p>
             </div>
@@ -102,7 +102,7 @@ export default class Timeline extends Component {
               <div className="leftArrow" />
               <img src={require('./images/acceptance.jpg')} alt="" />
               <p className="title">
-                I was accepted by <a href="https://www.coventry.ac.uk/">Coventry University</a>
+                Digging deeper into <a href="https://www.coventry.ac.uk/">Coventry University</a>
                 <br />
                 <p className="locationCard">
                   Athens,<strong>Greece</strong>
