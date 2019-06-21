@@ -1,0 +1,23 @@
+{
+  "name": "thesite",
+  "version": "1.0.0",
+  "description": "a cv website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyNameIsBond/CvWebsiteVol3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyNameIsBond/CvWebsiteVol3/issues"
+  },
+  "homepage": "https://github.com/MyNameIsBond/CvWebsiteVol3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.0.0"
+  }
+}

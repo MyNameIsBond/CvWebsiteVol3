@@ -4,9 +4,9 @@ $primaryColour: #455A64;
 $secondaryColour: #343a40;
 $thirdColour: lightblue;
 $font-Nav: 'Oswald', sans-serif;
-$font-title: 'Ubuntu', sans-serif;
+$font-title: 'Alfa Slab One', cursive;
 $font-logo: 'Pacifico', cursive;
-$shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
+$shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, .1)
 $veryLightGrey: #f7f7f7
 body
     overflow-x: hidden
@@ -144,6 +144,7 @@ body
             color: $greyText
     .languages
         img
+            margin-top: 15px
         p
             font-weight: bold
         .languagesGrid
@@ -174,7 +175,7 @@ body
 //Services
 .servicesContainer
     height: 100vh
-    padding: 0px 30px
+    padding: 100px 30px
     background-color: $veryLightGrey
     display: grid
     .serTitle
@@ -297,16 +298,20 @@ body
 #blogDjango
     grid-row: span 2
     grid-column: span 2
+.newtitle
+    font-family: $font-title
 
 .timelineContainer
     display: grid
+    padding: 100px 0px
     grid-template-rows: 100px 100px auto
     margin-top: 300px
-    height: 3500px
+    height: 2500px
     background-color: $veryLightGrey
     h1
         justify-self: center
         font-size: 4em
+        letter-spacing: 1px
 
     .timelineHeaders
         display: grid
@@ -322,7 +327,7 @@ body
 
 .timeLine
     .timelineCircles
-        grid-column: 2 
+        grid-column: 2
         grid-row: 1
         display: grid
         grid-template-rows: repeat(auto-fill, 370px)
@@ -334,6 +339,7 @@ body
             height: 85px
             width: 85px
             background-color: black
+            box-shadow: $shallowShadow
             display: grid
             p
                 font-size: 12px
@@ -344,6 +350,7 @@ body
         .careerlineCircles
             justify-self: center
             border-radius: 100%
+            box-shadow: $shallowShadow
             z-index: 1
             height: 85px
             width: 85px
@@ -403,6 +410,7 @@ body
     .title
         border-bottom: solid rgb(232, 232, 232) 1px
         margin-top: 15px
+        z-index: 1
         font-size: 30px
         a
             text-decoration: none
@@ -416,10 +424,9 @@ body
         border-bottom: solid rgb(232, 232, 232) 1px
     .cardSign
         justify-self: end
-        color: $primaryColour 
+        color: black
         font-weight: bold
         font-family: $font-logo
-
 
 // Cards on .timeLine
 .leftArrow
@@ -430,3 +437,107 @@ body
     z-index: 0
     position: absolute
     background-color: inherit
+.rightArrow
+    height: 25px
+    width: 25px
+    margin-top: 350px
+    transform: rotate(45deg)
+    left: 57.5%
+    z-index: 0
+    position: absolute
+    background-color: inherit
+
+
+
+.contactContainer
+    height: 600px
+    margin: 80px auto
+    width: 80%
+    padding: 0px 30px
+    display: grid
+    grid-template-columns: auto auto
+    h1
+        grid-column: span 2
+        place-self: center
+        align-self: start
+        font-size: 3em
+        letter-spacing: 1px
+    input
+        border-radius: 5px
+        justify-self: center
+        padding: 5px 25px
+        font-size: 17px
+        border: 1px 
+        height: 50px
+        color: $primaryColour
+        width: inherit
+        background-color: $veryLightGrey
+    input:focus
+        outline: none
+        
+    textarea
+        border-radius: 5px
+        justify-self: center
+        background-color: $veryLightGrey
+        border: none
+        height: 100px
+        width: inherit
+        resize: none
+        font-size: 17px
+        padding: 25px
+        grid-column: span 2
+    textarea:focus
+        outline: none
+    .buttonMessage
+        grid-column: span 2
+        place-self: center
+
+    a
+        cursor: pointer
+        padding: 20px 50px
+        background-color: black
+        color: white
+        text-decoration: none
+        font-weight: bold
+        box-shadow: $shallowShadow
+        border-radius: 7px
+        border: solid 1px black
+        transition: ease-in-out .2s
+    a:hover
+        border: solid $greyText 1px
+        background-color: white
+        color: $greyText
+.footer
+    display: grid
+    grid-template-columns: 33% 33% 33%
+    height: 300px
+    width: 100%
+    background-color: #1b1b1b
+
+    div
+        justify-self: center
+        align-self: center
+        display: grid
+        align-items: center
+        justify-items: center
+        grid-template-rows: auto 40px 20px
+        color: $greyText
+        i
+            color: $greyText !important
+        .footerTitle
+            color: white
+            font-weight: bold
+#subject
+    grid-column: span 2
+    width: inherit
+#name
+    justify-self: end
+    width: 75%
+
+#email
+    justify-self: center
+    width: 60%
+    
+
+
+    

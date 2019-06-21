@@ -6,6 +6,8 @@ import AboutMe from './components/AboutMe'
 import Services from './components/Services'
 import Portofolio from './components/Portofolio'
 import Timeline from './components/Timeline'
+import ContactMe from './components/ContactMe'
+import Fotter from './components/Fotter'
 function App() {
   return (
     <div>
@@ -15,6 +17,8 @@ function App() {
       <Services />
       <Portofolio />
       <Timeline />
+      <ContactMe />
+      <Fotter />
     </div>
   )
 }

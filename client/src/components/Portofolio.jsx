@@ -17,7 +17,7 @@ export default class Portofolio extends Component {
     return (
       <div className="portofolioContainer">
         <div className="serTitle">
-          <h1>Portofolio</h1>
+          <h1 className="newtitle">Portofolio</h1>
           <div className="separator" />
         </div>
         <div className="portofolioContent">

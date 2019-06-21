@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import MaterialIcon, { colorPalette } from 'material-icons-react'
+import MaterialIcon from 'material-icons-react'
 
 export default class Services extends Component {
   render() {
     return (
       <div className="servicesContainer">
         <div className="serTitle">
-          <h1>Services</h1>
+          <h1 className="newtitle">Services</h1>
           <div className="separator" />
         </div>
         <div className="services">
