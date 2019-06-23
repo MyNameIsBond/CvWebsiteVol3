@@ -8,9 +8,14 @@ $font-title: 'Alfa Slab One', cursive;
 $font-logo: 'Pacifico', cursive;
 $shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, .1)
 $veryLightGrey: #f7f7f7
+$small: 820px
+$verySmall: 520px
+$large: 1200px
+$medium: 1000px
+
 body
     overflow-x: hidden
-    
+
 // Navigation Bar
 .navContainer
     transition: ease-in-out 0.3s
@@ -24,6 +29,9 @@ body
     width: 100%
     z-index: 9
     min-height: 80px
+    @media screen and (max-width: $small)
+        padding: 0 0.5em
+        grid-template-columns: auto auto
     ul
         align-self: center
         justify-self: center
@@ -36,15 +44,33 @@ body
         padding-right: 15%
         float: right
         list-style-type: none
+        @media screen and (max-width: $small)
+            padding-right: 25px
+        @media screen and (min-width: $large)
+            padding-right: 15%
         li
             float: left
             padding: 0.9em 0.6em
+            @media screen and (max-width: $small)
+                padding-right: 0.6em 0.3em
+            @media screen and (min-width: $large)
+                padding-right: 0.9em 0.6em
             a
+                cursor: pointer
                 color: $whiteText
                 padding: 5px
                 text-decoration: none
             a:hover
-                border-bottom: 1px red solid
+                border-bottom: 1px black solid
+            a:after
+                content: ""
+                position: absolute
+                right: 0
+                z-index: 100
+                top: 0
+                width: 10px
+                height: 1px
+                background: #555
     .logo
         align-self: center
         font-size: 25px
@@ -115,6 +141,10 @@ body
             font-size: 18px
         h2
             font-size: 50px
+            @media screen and (max-width: $small)
+                font-size: 40px
+            @media screen and (min-width: $large)
+                font-size: 50px
             strong
                 font-family: $font-logo
                 color: $thirdColour
@@ -174,10 +204,12 @@ body
                 color: $greyText
 //Services
 .servicesContainer
-    height: 100vh
-    padding: 100px 30px
+    height: 850px
+    width: 100%
     background-color: $veryLightGrey
     display: grid
+    @media screen and (max-width: $medium)
+        height: 1200px
     .serTitle
         place-self: center
         align-self: start
@@ -195,7 +227,8 @@ body
         display: grid
         grid-gap: 15px
         grid-template-columns: repeat(3,auto)
-        grid-template-rows: repeat(2, minmax(200px, 280px))
+        @media screen and (max-width: $medium)
+            grid-template-columns: repeat(2,auto)
         div
             box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
             height: auto
@@ -212,11 +245,20 @@ body
 
 .portofolioContainer
     margin: 0px 6%
-    height: 100vh
+    height: 800px
     padding: 0px 30px
     background-color: $whiteText
     display: grid
+    justify-items: stretch
+    align-items: stretch
     grid-template-rows: 16% auto
+    @media screen and (max-width: $medium)
+        grid-template-rows: 10% repeat(1, minmax(200px, 480px))
+        height: 1900px
+    @media screen and (max-width: $small)
+        grid-template-rows: 10% repeat(6, minmax(200px, 480px))
+        margin: 0px 2%
+        padding: 0px 10px
     .serTitle
         place-self: center
         align-self: start
@@ -233,13 +275,25 @@ body
         grid-template-columns: repeat(4,auto)
         grid-template-rows: repeat(3,300px)
         grid-gap: 15px
+        @media screen and (max-width: $medium)
+            grid-gap: 5px
+            grid-template-columns: auto
+            grid-template-rows: repeat(4, 400px)
+        @media screen and (max-width: $small)
+            grid-gap: 5px
+            grid-template-rows: repeat(1,100%)
+            grid-template-columns: repeat(1,auto)
+
+
+
 .hoverCard
     box-shadow: none !important
+    width: 100%
     .Front
+        width: 100%
         display: grid
         justify-items: center
         align-items: center
-        width: 100%
         grid-template-column: auto
         grid-template-rows: auto 4px auto
         justify-items: center
@@ -262,6 +316,7 @@ body
                 color: $primaryColour
                 height: 100px
     .Back
+        width: 100%
         background-color: $primaryColour
         color: $whiteText
         display: grid
@@ -269,8 +324,7 @@ body
         padding-top: 20px
         grid-template-rows: 20% 35% auto
         grid-template-column: 60%
-        justify-self: start
-        width: 100%
+        justify-self: stretch
         justify-items: center
         align-items: center
         box-shadow: $shallowShadow
@@ -295,9 +349,57 @@ body
 #chattingSystem
     grid-row: span 2
     grid-column: span 2
+    @media screen and (max-width: $medium)
+        grid-row: auto
+        grid-column: auto
+        background-color: red
+    @media screen and (max-width: $small)
+        grid-row: span 1
+        grid-column: span 2
 #blogDjango
     grid-row: span 2
     grid-column: span 2
+    @media screen and (max-width: $medium)
+        grid-row: auto
+        grid-column: auto
+        background-color: green
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
+    @media screen and (max-width: $medium)
+        grid-column: auto
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
+#recipeWebsite
+    @media screen and (max-width: $medium)
+        grid-row: auto
+        grid-column: span 1
+        background-color: black
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
+#cryptoPr
+    @media screen and (max-width: $medium)
+        background-color: red
+        grid-row: auto
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
+#navSystem
+    @media screen and (max-width: $medium)
+        background-color: red
+        grid-row: auto
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
+#homeHub
+    @media screen and (max-width: $medium)
+        grid-row: auto
+        grid-column: auto
+    @media screen and (max-width: $small)
+        grid-row: auto
+        grid-column: auto
 .newtitle
     font-family: $font-title
 
@@ -312,7 +414,6 @@ body
         justify-self: center
         font-size: 4em
         letter-spacing: 1px
-
     .timelineHeaders
         display: grid
         grid-template-columns: repeat(2, 1fr)
@@ -448,14 +549,39 @@ body
     background-color: inherit
 
 
+.op
+    input
+        opacity: 0.1
 
+    text
+        opacity: 0.1
+
+    .buttonMessage
+        opacity: 0.1
+    textarea
+        opacity: 0.1
+
+    .loaderContainer
+        border-radius: 5px
+        margin-top: 100px
+        height: 50%
+        width: 800px
+        position: absolute
+        .css-0
+            padding: 10px auto
+            margin: 25%   
+            margin-left: 50%
 .contactContainer
+    .error
+        border: solid 1px #b30000
     height: 600px
     margin: 80px auto
     width: 80%
     padding: 0px 30px
     display: grid
     grid-template-columns: auto auto
+    @media screen and (max-width: $small)
+        width: 90%
     h1
         grid-column: span 2
         place-self: center
@@ -472,9 +598,11 @@ body
         color: $primaryColour
         width: inherit
         background-color: $veryLightGrey
+        @media screen and (max-width: $small)
+            grid-column: span 2
+
     input:focus
         outline: none
-        
     textarea
         border-radius: 5px
         justify-self: center
@@ -491,7 +619,6 @@ body
     .buttonMessage
         grid-column: span 2
         place-self: center
-
     a
         cursor: pointer
         padding: 20px 50px
@@ -533,11 +660,13 @@ body
 #name
     justify-self: end
     width: 75%
-
+    @media screen and (max-width: $small)
+        width: 90%
+        justify-self: center
 #email
     justify-self: center
     width: 60%
-    
-
-
-    
+    @media screen and (max-width: $small)
+        width: 90%
+.active
+    border-bottom: 1px solid black

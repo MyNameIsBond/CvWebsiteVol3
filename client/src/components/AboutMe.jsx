@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import Flag from 'react-world-flags'
 import SimpleIcons from 'simple-icons-react-component'
 import ReactTooltip from 'react-tooltip'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class AboutMe extends Component {
   render() {
     return (
-      <div>
+      <Element name="about">
         <div className="aboutMe">
           <img src={require('./images/profile4.png')} />
           <div className="aboutMeTextGrid">
@@ -136,7 +137,7 @@ export default class AboutMe extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Element>
     )
   }
 }

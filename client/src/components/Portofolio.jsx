@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { HoverCard } from 'react-png-hovercard'
 import SimpleIcons from 'simple-icons-react-component'
 import MaterialIcon, { colorPalette } from 'material-icons-react'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 export default class Portofolio extends Component {
   constructor(props) {
     super(props)
@@ -15,7 +17,7 @@ export default class Portofolio extends Component {
   render() {
     const { maxWidth, animationSpeed, height, borderRadius } = this.state
     return (
-      <div className="portofolioContainer">
+      <Element name="portofolio" className="portofolioContainer">
         <div className="serTitle">
           <h1 className="newtitle">Portofolio</h1>
           <div className="separator" />
@@ -173,13 +175,12 @@ export default class Portofolio extends Component {
               maxWidth={'100%'}
               animationSpeed={animationSpeed}
               height={'100%'}
-              margin={10}
               borderRadius={borderRadius}
               className="hoverCard"
             />
           </div>
         </div>
-      </div>
+      </Element>
     )
   }
 }

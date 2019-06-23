@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Parallax } from 'react-parallax'
 import SimpleIcons from 'simple-icons-react-component'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class WelcomeScreen extends Component {
   render() {
     return (
-      <div className="homeScreen">
+      <Element className="homeScreen" name="home">
         <Parallax
           bgClassName="homeImg"
           blur={5}
@@ -29,7 +30,7 @@ export default class WelcomeScreen extends Component {
             </div>
           </div>
         </Parallax>
-      </div>
+      </Element>
     )
   }
 }

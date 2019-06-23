@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { Element } from 'react-scroll'
 
 export default class Timeline extends Component {
   render() {
     return (
-      <div className="timelineContainer">
+      <Element name="timeline" className="timelineContainer">
         <h1 className="newtitle">Timeline</h1>
         <div className="timelineHeaders">
           <h4>My life</h4>
@@ -58,7 +59,7 @@ export default class Timeline extends Component {
                 Completed the 1st year studies with satisfying marks
                 <br />
                 <p className="locationCard">
-                  Athens,<strong>Greece</strong>
+                  Coventry,<strong>England</strong>
                 </p>
               </p>
               <p className="cardText">
@@ -75,7 +76,7 @@ export default class Timeline extends Component {
                 with a first class Degree
                 <br />
                 <p className="locationCard">
-                  Athens,<strong>Greece</strong>
+                  Coventry,<strong>England</strong>
                 </p>
               </p>
               <p className="cardText">
@@ -142,7 +143,7 @@ export default class Timeline extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Element>
     )
   }
 }

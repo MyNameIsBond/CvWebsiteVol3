@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import MaterialIcon from 'material-icons-react'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class Services extends Component {
   render() {
     return (
-      <div className="servicesContainer">
+      <Element name="services" className="servicesContainer">
         <div className="serTitle">
           <h1 className="newtitle">Services</h1>
           <div className="separator" />
@@ -58,7 +59,7 @@ export default class Services extends Component {
             </p>
           </div>
         </div>
-      </div>
+      </Element>
     )
   }
 }
