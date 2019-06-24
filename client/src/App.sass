@@ -10,12 +10,11 @@ $shallowShadow: 0px 10px 30px -8px rgba(0, 0, 0, .1)
 $veryLightGrey: #f7f7f7
 $small: 820px
 $verySmall: 520px
-$large: 1200px
-$medium: 1000px
+$large: 1400px
+$medium: 1200px
 
 body
     overflow-x: hidden
-
 // Navigation Bar
 .navContainer
     transition: ease-in-out 0.3s
@@ -142,25 +141,38 @@ body
         h2
             font-size: 50px
             @media screen and (max-width: $small)
-                font-size: 40px
+                font-size: 30px
             @media screen and (min-width: $large)
                 font-size: 50px
-            strong
-                font-family: $font-logo
-                color: $thirdColour
     .homeImg
         opacity: .7
 
-//   About me 
+//About me 
 .aboutMe
     display: grid
+    grid-template-columns: 32% 68%
+    grid-template-rows: 100%
     padding-top: 80px
-    height: 100vh
+    padding: inherit 20px
+    height: 800px
     width: 100%
-    grid-template-columns: 40% 60%
-    grid-template-rows: 100vh
+    @media screen and (max-width: $small)
+        padding: 30px
+        grid-template-columns: 5% 95%
+    @media screen and (min-width: $large)
+        padding: 30px
+        grid-template-columns: 30% 70%
     img
         justify-self: center
+        @media screen and (max-width: $small)
+            height: 110px
+            background-color: $primaryColour
+            margin-top: 60px
+            border-radius: 100%
+        @media screen and (min-width: $large)
+            justify-self: center
+            background-color: yellow
+            height: 120px
     .aboutMeTextGrid
         display: grid
         grid-auto-rows: auto
@@ -175,6 +187,11 @@ body
     .languages
         img
             margin-top: 15px
+            @media screen and (max-width: $large)
+                height: 20px
+                border-radius: 0px
+                padding-top: 0px
+
         p
             font-weight: bold
         .languagesGrid
@@ -183,13 +200,19 @@ body
             grid-template-columns: repeat(5, 80px)
     .skills
         display: grid
-        padding: 10px 0px
+        padding: 15px 0px
         p
             font-weight: bold
         svg
             height: 30px
         .skillsGrid
             display: grid
+            @media screen and (max-width: $small)
+                grid-template-columns: repeat(7, 80px)
+
+            @media screen and (min-width: $large)
+                grid-template-columns: repeat(9, 80px)
+
             grid-template-columns: repeat(8, 80px)
             grid-template-rows: auto
             grid-gap: 1em 0.5em
@@ -205,16 +228,25 @@ body
 //Services
 .servicesContainer
     height: 850px
+    padding: 100px 0px
     width: 100%
     background-color: $veryLightGrey
     display: grid
     @media screen and (max-width: $medium)
-        height: 1200px
+        height: 900px
+        padding: 50px 0px
+
+    @media screen and (max-width: $small)
+        height: 1400px
+        padding: 0px 0px
+        padding-bottom: 200px
+
     .serTitle
-        place-self: center
-        align-self: start
         font-weight: bold
         font-size: 25px
+        justify-self: center
+        align-self: start
+        padding-bottom: 100px
     .separator
         margin: -30px auto
         height: 3px
@@ -222,14 +254,22 @@ body
         border-radius: 50%
         background-color: $primaryColour
     .services
+        align-content: start
         justify-items: center
         padding: 0px 30px
         display: grid
-        grid-gap: 15px
+        grid-gap: 20px
+        padding: 0px 50px
         grid-template-columns: repeat(3,auto)
         @media screen and (max-width: $medium)
             grid-template-columns: repeat(2,auto)
+        @media screen and (max-width: $small)
+            grid-template-columns: repeat(1,auto)
+            margin: 0px 0px
         div
+            @media screen and (max-width: $small)
+                width: 100%
+                height: 150px
             box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1)
             height: auto
             width: 310px
