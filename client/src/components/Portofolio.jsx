@@ -8,9 +8,9 @@ export default class Portofolio extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      maxWidth: 400,
+      maxWidth: '100%',
       animationSpeed: 500,
-      height: 300,
+      height: '100%',
       borderRadius: '2px'
     }
   }
@@ -42,9 +42,9 @@ export default class Portofolio extends Component {
                   <SimpleIcons name="GitHub" />
                 </div>
               }
-              maxWidth={'100%'}
+              maxWidth={maxWidth}
               animationSpeed={animationSpeed}
-              height={'100%'}
+              height={height}
               margin={10}
               borderRadius={borderRadius}
               className="hoverCard"
@@ -69,7 +69,6 @@ export default class Portofolio extends Component {
                   <SimpleIcons name="GitHub" />
                 </div>
               }
-              maxWidth={maxWidth}
               animationSpeed={animationSpeed}
               height={height}
               margin={10}
@@ -124,9 +123,9 @@ export default class Portofolio extends Component {
                   <SimpleIcons name="GitHub" />
                 </div>
               }
-              maxWidth={'100%'}
+              maxWidth={maxWidth}
               animationSpeed={animationSpeed}
-              height={'100%'}
+              height={height}
               margin={10}
               borderRadius={borderRadius}
               className="hoverCard"
@@ -172,9 +171,10 @@ export default class Portofolio extends Component {
                   <SimpleIcons name="GitHub" />
                 </div>
               }
-              maxWidth={'100%'}
+              maxWidth={maxWidth}
               animationSpeed={animationSpeed}
-              height={'100%'}
+              height={height}
+              margin={10}
               borderRadius={borderRadius}
               className="hoverCard"
             />

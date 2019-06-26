@@ -146,6 +146,9 @@ body
                 font-size: 50px
     .homeImg
         opacity: .7
+    strong
+        color: $thirdColour
+        font-family: $font-logo
 
 //About me 
 .aboutMe
@@ -209,10 +212,8 @@ body
             display: grid
             @media screen and (max-width: $small)
                 grid-template-columns: repeat(7, 80px)
-
             @media screen and (min-width: $large)
                 grid-template-columns: repeat(9, 80px)
-
             grid-template-columns: repeat(8, 80px)
             grid-template-rows: auto
             grid-gap: 1em 0.5em
@@ -235,7 +236,6 @@ body
     @media screen and (max-width: $medium)
         height: 900px
         padding: 50px 0px
-
     @media screen and (max-width: $small)
         height: 1400px
         padding: 0px 0px
@@ -291,15 +291,21 @@ body
     display: grid
     justify-items: stretch
     align-items: stretch
-    grid-template-rows: 16% auto
+    grid-template-rows: 12% 100em
+    height: 1600px
     @media screen and (max-width: $medium)
-        grid-template-rows: 10% repeat(1, minmax(200px, 480px))
-        height: 1900px
+        height: 2400px
+        grid-template-rows: 8% auto
+        grid-template-columns:  auto
     @media screen and (max-width: $small)
-        grid-template-rows: 10% repeat(6, minmax(200px, 480px))
-        margin: 0px 2%
-        padding: 0px 10px
+        height: 2600px
+        margin: 0px
+        grid-template-rows: 6% auto
+        grid-template-columns:  auto
     .serTitle
+        @media screen and (max-width: $medium)
+            height: 20px
+        grid-template-columns:  auto
         place-self: center
         align-self: start
         font-weight: bold
@@ -312,24 +318,28 @@ body
         background-color: $primaryColour
     .portofolioContent
         display: grid
-        grid-template-columns: repeat(4,auto)
-        grid-template-rows: repeat(3,300px)
+        grid-template-columns: repeat(1,auto)
         grid-gap: 15px
         @media screen and (max-width: $medium)
             grid-gap: 5px
-            grid-template-columns: auto
-            grid-template-rows: repeat(4, 400px)
+            grid-auto-rows: 400px
+            grid-auto-columns: 400px
         @media screen and (max-width: $small)
             grid-gap: 5px
-            grid-template-rows: repeat(1,100%)
-            grid-template-columns: repeat(1,auto)
-
+            grid-template-columns: auto
+            grid-template-rows: repeat(1,600px)
 
 
 .hoverCard
     box-shadow: none !important
     width: 100%
     .Front
+        @media screen and (max-width: $medium)
+            height: 400px
+            width: 100%
+        @media screen and (max-width: $small)
+            height: 100%
+            width: 100%
         width: 100%
         display: grid
         justify-items: center
@@ -390,56 +400,43 @@ body
     grid-row: span 2
     grid-column: span 2
     @media screen and (max-width: $medium)
-        grid-row: auto
-        grid-column: auto
-        background-color: red
-    @media screen and (max-width: $small)
+        height: 100%
+        width: 100%
         grid-row: span 1
         grid-column: span 2
+    @media screen and (max-width: $small)
+        height: 100%
 #blogDjango
-    grid-row: span 2
+    grid-row: span 1
     grid-column: span 2
     @media screen and (max-width: $medium)
-        grid-row: auto
-        grid-column: auto
-        background-color: green
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
-    @media screen and (max-width: $medium)
-        grid-column: auto
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
+        height: 100%
+        grid-row: span 1
+        grid-column: span 2
 #recipeWebsite
     @media screen and (max-width: $medium)
-        grid-row: auto
-        grid-column: span 1
-        background-color: black
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
+        height: 100%
+        grid-row: span 1
+        grid-column: span 2
 #cryptoPr
     @media screen and (max-width: $medium)
-        background-color: red
-        grid-row: auto
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
-#navSystem
-    @media screen and (max-width: $medium)
-        background-color: red
-        grid-row: auto
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
+        height: 100%
+        width: 100%
+        grid-row: span 1
+        grid-column: span 2
 #homeHub
     @media screen and (max-width: $medium)
-        grid-row: auto
-        grid-column: auto
-    @media screen and (max-width: $small)
-        grid-row: auto
-        grid-column: auto
+        height: 100%
+        width: 100%
+        grid-row: span 1
+        grid-column: span 2
+
+#navSystem
+    @media screen and (max-width: $medium)
+        height: 100%
+        width: 100%
+        grid-row: span 1
+        grid-column: span 2
 .newtitle
     font-family: $font-title
 
@@ -680,6 +677,9 @@ body
     height: 300px
     width: 100%
     background-color: #1b1b1b
+    @media screen and (max-width: $small)
+        grid-template-columns: 100%
+        height: 500px
 
     div
         justify-self: center
@@ -709,4 +709,7 @@ body
     @media screen and (max-width: $small)
         width: 90%
 .active
+    transition-timing-function: ease-out;
+    transition-timing-function: cubic-bezier(0, 0, 0.58, 1)
+    /* A litttttle slower on the way in */
     border-bottom: 1px solid black
